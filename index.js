@@ -26,7 +26,7 @@ const data = anyTwoNumberSum(array, k);
 if(data.isMatch)
   console.log(
     "the first number found was "+ data.first + "!", 
-    "\nthe second number found was " + data.second, 
-    "\nthe sum of those added was "+ data.sum);
+    "\nthe second number found was " + data.second + "!", 
+    "\nthe sum of those added was "+ data.sum + "!");
 else
   console.log("no matches!");
