@@ -5,14 +5,16 @@
 // Bonus: Can you do this in one pass?
 
 const array = [10, 15, 3, 7];
-const k = 17;
+const k = 20;
 
+const sortedArray = array.sort((a,b)=>a-b);
+console.log(sortedArray);
 
 function anyTwoNumberSum(array, sum)
 {
     for(var i = 0; i < array.length; i++)
     {
-        for(var j = 0; j < array.length; j++)
+        for(var j = i + 1; j < array.length; j++)
         {
             if(array[i] + array[j] == sum)
                 return {first: array[i], second: array[j], sum: sum, isMatch: true};
@@ -25,8 +27,8 @@ const data = anyTwoNumberSum(array, k);
 
 if(data.isMatch)
   console.log(
-    "the first number found was "+ data.first + "!", 
-    "\nthe second number found was " + data.second + "!", 
-    "\nthe sum of those added was "+ data.sum + "!");
+    "The first number found was "+ data.first + "!", 
+    "\nThe second number found was " + data.second + "!", 
+    "\nThe sum of those added is "+ data.sum + "!");
 else
-  console.log("no matches!");
+  console.log("There were no matches!");
